@@ -26,6 +26,10 @@ plot_partition$Time <- strptime(plot_partition$Time, format = "%H:%M:%S")
 
 plot_partition$Time2 <- as.POSIXct(paste(plot_partition$Date, plot_partition$Time), format="%Y-%m-%d %H:%M:%S")
 
+plot_partition$datetime <- as.POSIXct(paste(plot_partition$Date, plot_partition$Time), format="%Y-%m-%d %H:%M:%S")
+
+plot(plot_partition$Time2, plot_partition$globalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+
 ## PLOT!!!!
 
 ## set the number of rows to 2 and the number of columns to 2.  Use mfcol rather than mfrow
@@ -94,7 +98,7 @@ with(plot_partition, lines(Time2, Global_reactive_power, type="l"))
 
 ## Output the histogram as a png file
 
-dev.copy(png,file = "plot4.png")
+dev.copy(png,file = "plot4.png", width = 480, height = 480)
 
 ## turn off to create the file
 

@@ -62,7 +62,7 @@ legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_
 
 ## Output the histogram as a png file
 
-dev.copy(png,file = "plot3.png")
+dev.copy(png,file = "plot3.png", width = 480, height = 480)
 
 ## turn off to create the file
 

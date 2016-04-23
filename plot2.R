@@ -43,7 +43,7 @@ with(plot_partition, lines(Time2, Global_active_power, type="l"))
 
 ## Output the histogram as a png file
 
-dev.copy(png,file = "plot2.png")
+dev.copy(png,file = "plot2.png", width = 480, height = 480)
 
 ## turn off to create the file
 

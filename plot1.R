@@ -26,7 +26,7 @@ hist(plot_partition$Global_active_power,col="red",main="Global Active Power", xl
 
 ## Output the histogram as a png file
 
-dev.copy(png,file = "plot1.png")
+dev.copy(png,file = "plot1.png", width = 480, height = 480)
 
 ## turn off to create the file
 
